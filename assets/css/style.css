@@ -2,12 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* font-family: Copperplate, Copperplate Gothic Light, fantasy; */
 }
 body{
     background-color:darkorange;
 }
 header {
     display: flex;
+    justify-content:space-between;
     padding: 15px 35px;
     position: -webkit-sticky;
     position: sticky;
@@ -15,6 +17,9 @@ header {
     background-color:darkorange;
 }
 
+header h1 {
+    color: #eee;
+}
 header nav {
     margin: 0;
 }
@@ -36,7 +41,7 @@ header nav ul li {
 header nav ul li a {
     text-decoration: none;
     padding: 10px 15px;
-    color:white;
+    color:#eee;
     font-size: 20px;
     align-items:center;
     font-weight: bold;
@@ -55,29 +60,29 @@ section {
     display: flex;
     flex-wrap: wrap;
     width:50%;
-    margin: 60px auto;
+    margin: 100px auto;
 }
 
 .about-me h1 {
     color: whitesmoke;
-    font-size: 70px;
+    font-size: 100px;
     padding-bottom: 20px;
     width: 100%;
 }
 
 .about-me div p {
     color: whitesmoke;
-    font-size: 20px;
+    font-size: 30px;
     align-items: left;
     width: 70%;
 }
 
 .work {
     width:50%;
-    margin: 0 auto;
+    margin: 100px auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content:flex-start;
     align-items: center;
     column-gap: 30px;
 }
@@ -93,25 +98,53 @@ section {
     background-color: #39a6b2;
     margin-bottom: 30px;
     flex: 0 100%; 
-    opacity: 0.8;
     border: 1px white solid;
+    position: relative;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.8);
 }
 
-.hover:hover {
+.hover:hover img {
     opacity: 1;
+}
+
+.run-buddy:hover .run-info {
+    display:block;
 }
 
 .run-buddy img {
     width:100% ; 
+    opacity: 0.8;
 }
 
-.project-info {
+.end {
+    width:500px;
+    border: 1px white solid;
+    position: relative;
+    box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.8);
+}
+
+.end img {
+    width:100%;
+    opacity: 0.8;
+}
+
+.end:hover .end-info {
+    display:block;
+}
+
+.info {
     padding: 7px;
     color: white;
+    position: absolute;
+    bottom: 0;
+    left:0;
+    background-color: grey;
+    width:100%;
+    display:none;
 }
 
-.project-info h3 {
-    font-size: 30px;
+.info h3 {
+    font-size: 20px;
 }
 
 .run-buddy a {
@@ -123,7 +156,7 @@ section {
     flex-wrap: wrap;
     justify-content: space-around;
     width: 50%;
-    margin: 0 auto;
+    margin: 80px auto 0px auto;
 }
 
 .contact-me h2 {

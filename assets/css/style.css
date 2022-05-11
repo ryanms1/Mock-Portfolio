@@ -63,18 +63,73 @@ section {
     margin: 100px auto;
 }
 
-.about-me h1 {
+.content {
+    position: relative;
+    width: 70%;
+    margin: 50px auto;
+  }
+  
+  .content h2 {
+    color: #fff;
+    font-size: 70px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
+  
+  .content h2:nth-child(1) {
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+  }
+  
+  .content h2:nth-child(2) {
+    color: #fff;
+    animation: animate 4s ease-in-out infinite;
+  }
+  
+  @keyframes animate {
+    0%,
+    100% {
+      clip-path: polygon(
+        0% 45%,
+        16% 44%,
+        33% 50%,
+        54% 60%,
+        70% 61%,
+        84% 59%,
+        100% 52%,
+        100% 100%,
+        0% 100%
+      );
+    }
+  
+    50% {
+      clip-path: polygon(
+        0% 60%,
+        15% 65%,
+        34% 66%,
+        51% 62%,
+        67% 50%,
+        84% 45%,
+        100% 46%,
+        100% 100%,
+        0% 100%
+      );
+    }
+  }
+
+/* .about-me h1 {
     color: whitesmoke;
-    font-size: 100px;
+    font-size: 40px;
     padding-bottom: 20px;
     width: 100%;
-}
+}  */
 
-.about-me div p {
+.bio {
     color: whitesmoke;
     font-size: 30px;
     align-items: left;
     width: 70%;
+    position: relative;
 }
 
 .work {
@@ -181,6 +236,7 @@ section {
     font-size: 20px;
     border-left: 1px white solid;
 }
+
 
 @media screen and (max-width:980px) {
     .about-me div p {
